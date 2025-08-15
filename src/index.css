@@ -36,10 +36,10 @@
 
     --radius: 0.75rem;
 
-    /* Custom MMM tokens */
-    --gold: 45 65% 50.2%; /* #C9A635 */
-    --gold-light: 45 65% 60%;
-    --gold-dark: 45 65% 40%;
+    /* Custom MMM tokens - Sharper Gold */
+    --gold: 45 75% 55%; /* Sharper, more vibrant gold */
+    --gold-light: 45 80% 65%;
+    --gold-dark: 45 70% 45%;
     --cream: 48 15% 95.3%; /* #F8F5F0 */
     --dark-bg: 0 0% 10.2%; /* #1A1A1A */
     --dark-card: 0 0% 12%;
