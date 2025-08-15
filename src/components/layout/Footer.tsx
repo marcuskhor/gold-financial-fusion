@@ -90,8 +90,8 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <h4 className="text-lg font-semibold text-foreground mb-4">Services</h4>
             <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
-                <li key={link.to}>
+              {footerLinks.services.map((link, index) => (
+                <li key={`${link.to}-${index}`}>
                   <Link
                     to={link.to}
                     className="text-muted-foreground hover:text-primary transition-colors text-sm"

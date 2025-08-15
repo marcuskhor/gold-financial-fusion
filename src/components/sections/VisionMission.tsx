@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Target, Eye, Users, Shield, Star, Award, TrendingUp, Zap } from 'lucide-react';
+import { Target, Eye, Star, Award, TrendingUp, Zap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const VisionMission = () => {
