@@ -244,9 +244,9 @@ const Home = () => {
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button 
-                    variant="outline" 
+                    variant="secondary" 
                     size="lg" 
-                    className="min-w-[200px] border-background text-background hover:bg-background hover:text-foreground" 
+                    className="min-w-[200px] bg-background text-foreground border-2 border-background hover:bg-transparent hover:text-background" 
                     asChild
                   >
                     <Link to="/services">Explore Our Services</Link>
