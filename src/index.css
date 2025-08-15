@@ -2,41 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* MMM Financial Consultancy Design System - Gold & Dark Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 10.2%; /* #1A1A1A */
+    --foreground: 48 15% 95.3%; /* #F8F5F0 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 12%;
+    --card-foreground: 48 15% 95.3%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 48 15% 95.3%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 45 65% 50.2%; /* #C9A635 Gold */
+    --primary-foreground: 0 0% 10.2%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 48 15% 95.3%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 48 10% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 65% 50.2%; /* Gold accent */
+    --accent-foreground: 0 0% 10.2%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 48 15% 95.3%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 45 65% 50.2%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom MMM tokens */
+    --gold: 45 65% 50.2%; /* #C9A635 */
+    --gold-light: 45 65% 60%;
+    --gold-dark: 45 65% 40%;
+    --cream: 48 15% 95.3%; /* #F8F5F0 */
+    --dark-bg: 0 0% 10.2%; /* #1A1A1A */
+    --dark-card: 0 0% 12%;
+    --dark-surface: 0 0% 15%;
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)));
+    --gradient-dark: linear-gradient(135deg, hsl(var(--dark-bg)), hsl(var(--dark-card)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--dark-bg)) 0%, hsl(var(--dark-card)) 50%, hsl(var(--gold) / 0.1) 100%);
+
+    /* Shadows */
+    --shadow-gold: 0 10px 30px -10px hsl(var(--gold) / 0.3);
+    --shadow-elegant: 0 20px 40px -10px hsl(0 0% 0% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
