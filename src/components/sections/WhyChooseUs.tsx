@@ -103,7 +103,7 @@ const WhyChooseUs = () => {
         >
           {features.map((feature, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <Card className="group hover:shadow-gold transition-all duration-300 hover:-translate-y-1 h-full border-border/50">
+              <Card className="group hover:shadow-gold transition-all duration-300 hover:-translate-y-1 h-full border-border/50 bg-white">
                 <CardContent className="p-6 text-center">
                   <div className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon size={32} className="text-background" />

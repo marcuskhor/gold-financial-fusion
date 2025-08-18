@@ -170,7 +170,7 @@ const Home = () => {
                 animate={servicesInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 30, scale: 0.9 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2">
+                <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 bg-white">
                   <CardContent className="p-6 text-center">
                     <motion.div 
                       whileHover={{ scale: 1.1, rotate: 5 }}
