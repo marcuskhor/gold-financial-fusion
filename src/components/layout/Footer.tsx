@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, LinkedinIcon, Twitter } from "lucide-react";
+import mmm_logo from "@/assets/MMM_logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -38,15 +39,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-4">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center">
-                <span className="text-background font-bold">MMM</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-foreground">Multi Metrics Marketing</h3>
-                <p className="text-sm text-muted-foreground">Financial Solutions</p>
-              </div>
-            </div>
+            <img 
+              src={mmm_logo} 
+              alt="MMM" 
+              className="h-20 w-20 sm:h-16q sm:w-64 text-primary flex-shrink-0"
+            />
             <p className="text-muted-foreground mb-6 leading-relaxed">
               Empowering individuals and businesses to make smarter financial decisions. 
               We're committed to revolutionizing financial solutions for a more resilient, 

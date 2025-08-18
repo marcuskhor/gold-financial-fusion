@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import mmm_logo from "@/assets/MMM_logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,13 +25,11 @@ const Header = () => {
           {/* Logo Space */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-gold rounded-lg flex items-center justify-center">
-                <span className="text-background font-bold text-lg">MMM</span>
-              </div>
-              <div className="hidden sm:block">
-                <h2 className="text-xl font-bold text-foreground">Multi Metrics Marketing</h2>
-                <p className="text-sm text-muted-foreground">Financial Solutions</p>
-              </div>
+              <img 
+              src={mmm_logo} 
+              alt="MMM" 
+              className="h-20 w-20 sm:h-16q sm:w-64 text-primary flex-shrink-0"
+            />
             </Link>
           </div>
 
