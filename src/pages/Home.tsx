@@ -145,7 +145,7 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 lg:py-24" ref={servicesRef}>
+      <section className="py-16 lg:py-24 bg-white" ref={servicesRef}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
