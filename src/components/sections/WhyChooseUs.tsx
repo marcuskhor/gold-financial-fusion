@@ -78,7 +78,7 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-dark-card" ref={ref}>
+    <section className="py-16 lg:py-24 bg-white" ref={ref}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={titleVariants}
@@ -86,10 +86,10 @@ const WhyChooseUs = () => {
           animate={inView ? "visible" : "hidden"}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 mb-6">
             Why Choose Multi Metrics Marketing?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             We don't just provide financial services – we deliver transformational results 
             that position you for sustainable success in an ever-evolving financial landscape.
           </p>
@@ -103,15 +103,15 @@ const WhyChooseUs = () => {
         >
           {features.map((feature, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <Card className="group hover:shadow-gold transition-all duration-300 hover:-translate-y-1 h-full border-border/50">
+              <Card className="group hover:shadow-gold transition-all duration-300 hover:-translate-y-1 h-full bg-white border-slate-200">
                 <CardContent className="p-6 text-center">
                   <div className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon size={32} className="text-background" />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-slate-600 leading-relaxed">
                     {feature.description}
                   </p>
                 </CardContent>
