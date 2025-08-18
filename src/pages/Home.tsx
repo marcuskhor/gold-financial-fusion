@@ -116,7 +116,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-dark-card">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
@@ -131,12 +131,12 @@ const Home = () => {
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="text-3xl lg:text-4xl font-bold text-mmm-gold mb-2">
+                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
                     {stat.prefix}
                     {index === 1 ? (counter.count / 10).toFixed(1) : counter.count}
                     {stat.suffix}
                   </div>
-                  <div className="text-slate-600">{stat.label}</div>
+                  <div className="text-muted-foreground">{stat.label}</div>
                 </motion.div>
               );
             })}
@@ -145,7 +145,7 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 lg:py-24 bg-white" ref={servicesRef}>
+      <section className="py-16 lg:py-24" ref={servicesRef}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -153,10 +153,10 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 mb-6">
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
               Our Core Services
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Comprehensive financial solutions designed to reshape the financial landscape 
               and drive sustainable growth for our clients.
             </p>
@@ -170,7 +170,7 @@ const Home = () => {
                 animate={servicesInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 30, scale: 0.9 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 bg-white border-slate-200">
+                <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2">
                   <CardContent className="p-6 text-center">
                     <motion.div 
                       whileHover={{ scale: 1.1, rotate: 5 }}
@@ -179,10 +179,10 @@ const Home = () => {
                     >
                       <service.icon size={32} className="text-background" />
                     </motion.div>
-                    <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                    <h3 className="text-xl font-semibold text-foreground mb-3">
                       {service.title}
                     </h3>
-                    <p className="text-slate-600 leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed">
                       {service.description}
                     </p>
                   </CardContent>
