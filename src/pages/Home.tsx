@@ -153,10 +153,10 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl lg:text-5xl font-bold text-black mb-6">
               Our Core Services
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive financial solutions designed to reshape the financial landscape 
               and drive sustainable growth for our clients.
             </p>
@@ -179,10 +179,10 @@ const Home = () => {
                     >
                       <service.icon size={32} className="text-background" />
                     </motion.div>
-                    <h3 className="text-xl font-semibold text-foreground mb-3">
+                    <h3 className="text-xl font-semibold text-black mb-3">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed">
                       {service.description}
                     </p>
                   </CardContent>
