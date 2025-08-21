@@ -8,6 +8,10 @@ import heroImage from "@/assets/loan-hero-bg.jpg";
 import loanServicesImage from "@/assets/loan-services.jpg";
 import businessLoansImage from "@/assets/business-loans.jpg";
 import loanSuccessImage from "@/assets/loan-success.jpg";
+import financialPlanningImage from "@/assets/financial-planning.jpg";
+import riskManagementImage from "@/assets/risk-management.jpg";
+import investmentAdvisoryImage from "@/assets/investment-advisory.jpg";
+import businessConsultingImage from "@/assets/business-consulting.jpg";
 import { useCountAnimation } from "@/hooks/useCountAnimation";
 import VisionMission from "@/components/sections/VisionMission";
 import Testimonials from "@/components/sections/Testimonials";
@@ -43,21 +47,25 @@ const Home = () => {
       icon: TrendingUp,
       title: "Financial Planning",
       description: "Comprehensive financial strategies tailored to your goals and risk tolerance.",
+      image: financialPlanningImage,
     },
     {
       icon: Shield,
       title: "Risk Management",
       description: "Protect your wealth with sophisticated risk assessment and mitigation strategies.",
+      image: riskManagementImage,
     },
     {
       icon: Target,
       title: "Investment Advisory",
       description: "Expert guidance to optimize your investment portfolio for maximum returns.",
+      image: investmentAdvisoryImage,
     },
     {
       icon: BarChart3,
       title: "Business Consulting",
       description: "Strategic business financial consulting to accelerate growth and profitability.",
+      image: businessConsultingImage,
     },
   ];
 
@@ -148,17 +156,8 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 lg:py-24 bg-white relative overflow-hidden" ref={servicesRef}>
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: `url(${loanServicesImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="py-16 lg:py-24 bg-white" ref={servicesRef}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={servicesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -182,12 +181,20 @@ const Home = () => {
                 animate={servicesInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 30, scale: 0.9 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 bg-white">
+                <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 bg-white overflow-hidden">
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                  </div>
                   <CardContent className="p-6 text-center">
                     <motion.div 
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       transition={{ type: "spring", stiffness: 300 }}
-                      className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-4"
+                      className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-4 -mt-8 relative z-10 shadow-lg"
                     >
                       <service.icon size={32} className="text-background" />
                     </motion.div>
