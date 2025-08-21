@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { CheckCircle, TrendingUp, Award, Clock, HeadphonesIcon, Globe } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import whyChooseUsImage from '@/assets/why-choose-us.jpg';
 
 const WhyChooseUs = () => {
   const [ref, inView] = useInView({
@@ -95,36 +96,71 @@ const WhyChooseUs = () => {
           </p>
         </motion.div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          {features.map((feature, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Card className="group hover:shadow-gold transition-all duration-300 hover:-translate-y-1 h-full border-border/50 bg-white">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon size={32} className="text-background" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-black mb-4">
-                    {feature.title}
-                  </h3>
-                  <p className="text-lg text-gray-600 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </CardContent>
-              </Card>
+        {/* Main content with image on side */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
+          {/* Left side - Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative"
+          >
+            <div className="relative overflow-hidden rounded-2xl shadow-elegant">
+              <img
+                src={whyChooseUsImage}
+                alt="Professional financial advisory team working together"
+                className="w-full h-[500px] lg:h-[600px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-gold/20 to-transparent" />
+            </div>
+            
+            {/* Floating stats card */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-gold border border-gold/20"
+            >
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-1">98%</div>
+                <div className="text-sm text-gray-600">Client Satisfaction</div>
+              </div>
             </motion.div>
-          ))}
-        </motion.div>
+          </motion.div>
 
+          {/* Right side - Features grid */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+          >
+            {features.map((feature, index) => (
+              <motion.div key={index} variants={itemVariants}>
+                <Card className="group hover:shadow-gold transition-all duration-300 hover:-translate-y-1 h-full border-border/50 bg-white">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 bg-gradient-gold rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <feature.icon size={24} className="text-background" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-black mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed text-sm">
+                      {feature.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Call to action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center mt-12"
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center"
         >
           <div className="bg-gradient-gold p-8 rounded-2xl max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-background mb-4">
