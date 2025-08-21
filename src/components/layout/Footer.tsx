@@ -44,14 +44,14 @@ const Footer = () => {
               alt="MMM" 
               className="h-20 w-20 sm:h-16q sm:w-64 text-primary flex-shrink-0"
             />
-            <p className="text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-base text-muted-foreground mb-6 leading-relaxed">
               Empowering individuals and businesses to make smarter financial decisions. 
               We're committed to revolutionizing financial solutions for a more resilient, 
               profitable, and sustainable future.
             </p>
             
             {/* Contact Info */}
-            <div className="space-y-3 text-sm">
+            <div className="space-y-3 text-base">
               <div className="flex items-center space-x-3 text-muted-foreground">
                 <Mail size={16} className="text-primary" />
                 <span>info@multimetricsmarketing.com</span>
@@ -69,13 +69,13 @@ const Footer = () => {
 
           {/* Links Sections */}
           <div className="lg:col-span-2">
-            <h4 className="text-lg font-semibold text-foreground mb-4">Company</h4>
+            <h4 className="text-xl font-semibold text-foreground mb-4">Company</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    className="text-muted-foreground hover:text-primary transition-colors text-base"
                   >
                     {link.label}
                   </Link>
@@ -85,13 +85,13 @@ const Footer = () => {
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-lg font-semibold text-foreground mb-4">Services</h4>
+            <h4 className="text-xl font-semibold text-foreground mb-4">Services</h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link, index) => (
                 <li key={`${link.to}-${index}`}>
                   <Link
                     to={link.to}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    className="text-muted-foreground hover:text-primary transition-colors text-base"
                   >
                     {link.label}
                   </Link>
@@ -101,13 +101,13 @@ const Footer = () => {
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-lg font-semibold text-foreground mb-4">Resources</h4>
+            <h4 className="text-xl font-semibold text-foreground mb-4">Resources</h4>
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    className="text-muted-foreground hover:text-primary transition-colors text-base"
                   >
                     {link.label}
                   </Link>
@@ -117,13 +117,13 @@ const Footer = () => {
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-lg font-semibold text-foreground mb-4">Legal</h4>
+            <h4 className="text-xl font-semibold text-foreground mb-4">Legal</h4>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    className="text-muted-foreground hover:text-primary transition-colors text-base"
                   >
                     {link.label}
                   </Link>
@@ -136,7 +136,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-muted-foreground">
+            <div className="text-base text-muted-foreground">
               © {currentYear} Multi Metrics Marketing. All rights reserved.
             </div>
             

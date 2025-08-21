@@ -39,7 +39,7 @@ const Header = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-lg font-medium transition-colors hover:text-primary ${
                   isActive(link.to) ? "text-primary" : "text-foreground/80"
                 }`}
               >
@@ -76,7 +76,7 @@ const Header = () => {
                   key={link.to}
                   to={link.to}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`block text-base font-medium transition-colors hover:text-primary ${
+                  className={`block text-xl font-medium transition-colors hover:text-primary ${
                     isActive(link.to) ? "text-primary" : "text-foreground/80"
                   }`}
                 >
