@@ -86,10 +86,10 @@ const WhyChooseUs = () => {
           animate={inView ? "visible" : "hidden"}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-5xl font-bold text-black mb-6">
+          <h2 className="text-4xl lg:text-6xl font-bold text-black mb-8">
             Why Choose Multi Metrics Marketing?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
             We don't just provide financial services – we deliver transformational results 
             that position you for sustainable success in an ever-evolving financial landscape.
           </p>
@@ -108,10 +108,10 @@ const WhyChooseUs = () => {
                   <div className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon size={32} className="text-background" />
                   </div>
-                  <h3 className="text-xl font-semibold text-black mb-3">
+                  <h3 className="text-2xl font-semibold text-black mb-4">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-lg text-gray-600 leading-relaxed">
                     {feature.description}
                   </p>
                 </CardContent>

@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 import { ArrowRight, TrendingUp, Shield, Target, Users, BarChart3, Calculator } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import heroImage from "@/assets/hero-bg.jpg";
+import heroImage from "@/assets/loan-hero-bg.jpg";
+import loanServicesImage from "@/assets/loan-services.jpg";
+import businessLoansImage from "@/assets/business-loans.jpg";
+import loanSuccessImage from "@/assets/loan-success.jpg";
 import { useCountAnimation } from "@/hooks/useCountAnimation";
 import VisionMission from "@/components/sections/VisionMission";
 import Testimonials from "@/components/sections/Testimonials";
@@ -76,7 +79,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight"
+              className="text-5xl sm:text-6xl lg:text-8xl font-bold text-foreground mb-8 leading-tight"
             >
               Revolutionizing 
               <span className="text-transparent bg-gradient-gold bg-clip-text"> Financial </span>
@@ -86,7 +89,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl sm:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto"
+              className="text-2xl sm:text-3xl text-muted-foreground mb-10 leading-relaxed max-w-3xl mx-auto"
             >
               Empowering individuals and businesses to make smarter financial decisions 
               that grow and future-proof their finances to be more resilient, profitable and sustainable.
@@ -131,12 +134,12 @@ const Home = () => {
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
+                  <div className="text-4xl lg:text-5xl font-bold text-primary mb-3">
                     {stat.prefix}
                     {index === 1 ? (counter.count / 10).toFixed(1) : counter.count}
                     {stat.suffix}
                   </div>
-                  <div className="text-muted-foreground">{stat.label}</div>
+                  <div className="text-lg text-muted-foreground">{stat.label}</div>
                 </motion.div>
               );
             })}
@@ -145,18 +148,27 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 lg:py-24 bg-white" ref={servicesRef}>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-white relative overflow-hidden" ref={servicesRef}>
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: `url(${loanServicesImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={servicesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-5xl font-bold text-black mb-6">
+            <h2 className="text-4xl lg:text-6xl font-bold text-black mb-8">
               Our Core Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive financial solutions designed to reshape the financial landscape 
               and drive sustainable growth for our clients.
             </p>
@@ -179,10 +191,10 @@ const Home = () => {
                     >
                       <service.icon size={32} className="text-background" />
                     </motion.div>
-                    <h3 className="text-xl font-semibold text-black mb-3">
+                    <h3 className="text-2xl font-semibold text-black mb-4">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-lg text-gray-600 leading-relaxed">
                       {service.description}
                     </p>
                   </CardContent>
@@ -219,8 +231,17 @@ const Home = () => {
       <Testimonials />
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-dark-card">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-dark-card relative overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `url(${loanSuccessImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -228,15 +249,24 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="bg-gradient-gold p-12 rounded-3xl max-w-4xl mx-auto">
-              <h2 className="text-3xl lg:text-4xl font-bold text-background mb-6">
+            <div className="bg-gradient-gold p-12 rounded-3xl max-w-4xl mx-auto relative">
+              {/* Additional overlay image inside the CTA */}
+              <div 
+                className="absolute inset-0 opacity-5 rounded-3xl"
+                style={{
+                  backgroundImage: `url(${businessLoansImage})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              />
+              <h2 className="text-4xl lg:text-5xl font-bold text-background mb-8 relative z-10">
                 Ready to Transform Your Financial Future?
               </h2>
-              <p className="text-xl text-background/80 mb-8 max-w-2xl mx-auto">
+              <p className="text-2xl text-background/80 mb-10 max-w-2xl mx-auto relative z-10">
                 Join thousands of satisfied clients who have revolutionized their finances 
                 with our expert guidance and innovative solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button variant="secondary" size="lg" className="min-w-[200px]" asChild>
                     <Link to="/contact">Book Free Consultation</Link>
