@@ -21,14 +21,14 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo Space */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3">
               <img 
               src={mmm_logo} 
               alt="MMM" 
-              className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 object-contain flex-shrink-0"
+              className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 object-contain flex-shrink-0"
             />
             </Link>
           </div>

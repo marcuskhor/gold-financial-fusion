@@ -42,7 +42,7 @@ const Footer = () => {
             <img 
               src={mmm_logo} 
               alt="MMM" 
-              className="h-16 w-16 object-contain flex-shrink-0 mb-4"
+              className="h-20 w-20 sm:h-24 sm:w-24 lg:h-28 lg:w-28 object-contain flex-shrink-0 mb-4"
             />
             <p className="text-base text-muted-foreground mb-6 leading-relaxed">
               Empowering individuals and businesses to make smarter financial decisions. 
