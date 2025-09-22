@@ -313,8 +313,8 @@ const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
-              <a href="tel:+15551234567">
-                Call Now: +1 (555) 123-4567
+              <a href="tel:03-6257-8688">
+                Call Now: 03-6257 8688
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
