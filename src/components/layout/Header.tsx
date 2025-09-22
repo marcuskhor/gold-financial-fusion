@@ -28,7 +28,7 @@ const Header = () => {
               <img 
               src={mmm_logo} 
               alt="MMM" 
-              className="h-20 w-20 sm:h-16q sm:w-64 text-primary flex-shrink-0"
+              className="h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 object-contain flex-shrink-0"
             />
             </Link>
           </div>

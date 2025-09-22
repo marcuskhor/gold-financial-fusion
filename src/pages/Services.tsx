@@ -16,47 +16,63 @@ import {
 const Services = () => {
   const mainServices = [
     {
-      icon: TrendingUp,
-      title: "Financial Planning",
-      description: "Comprehensive financial strategies tailored to your goals and risk tolerance.",
+      icon: Users,
+      title: "Personal Loans",
+      description: "Tailored personal financing solutions for your individual needs and goals.",
+      clients: "25,369",
       features: [
-        "Retirement Planning",
-        "Estate Planning",
-        "Tax Optimization",
-        "Cash Flow Management"
-      ]
-    },
-    {
-      icon: Shield,
-      title: "Risk Management",
-      description: "Protect your wealth with sophisticated risk assessment and mitigation strategies.",
-      features: [
-        "Insurance Analysis",
-        "Portfolio Risk Assessment",
-        "Hedging Strategies",
-        "Crisis Management"
-      ]
-    },
-    {
-      icon: Target,
-      title: "Investment Advisory",
-      description: "Expert guidance to optimize your investment portfolio for maximum returns.",
-      features: [
-        "Portfolio Management",
-        "Asset Allocation",
-        "Market Analysis",
-        "Performance Monitoring"
+        "Personal Financing",
+        "Credit Advisory",
+        "Loan Restructuring",
+        "Financial Planning"
       ]
     },
     {
       icon: BarChart3,
-      title: "Business Consulting",
-      description: "Strategic business financial consulting to accelerate growth and profitability.",
+      title: "SME Financing",
+      description: "Business loans and financing solutions to help your enterprise grow.",
+      clients: "834",
       features: [
-        "Business Valuation",
-        "Capital Structure",
-        "M&A Advisory",
-        "Growth Strategy"
+        "Business Loans",
+        "Working Capital",
+        "Equipment Financing",
+        "Trade Financing"
+      ]
+    },
+    {
+      icon: Shield,
+      title: "Debt Consolidation",
+      description: "Simplify your finances by consolidating multiple debts into one manageable payment.",
+      clients: "8,756",
+      features: [
+        "Debt Restructuring",
+        "Payment Consolidation",
+        "Interest Rate Optimization",
+        "Financial Counseling"
+      ]
+    },
+    {
+      icon: TrendingUp,
+      title: "Housing Loans",
+      description: "Make your dream home a reality with our competitive housing loan packages.",
+      clients: "329",
+      features: [
+        "Home Purchase Loans",
+        "Refinancing Options",
+        "Construction Loans",
+        "Islamic Financing"
+      ]
+    },
+    {
+      icon: Calculator,
+      title: "Refinancing",
+      description: "Optimize your existing loans with better rates and terms through refinancing.",
+      clients: "458",
+      features: [
+        "Rate Comparison",
+        "Loan Restructuring",
+        "Terms Optimization",
+        "Cost Savings Analysis"
       ]
     }
   ];
@@ -111,15 +127,20 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {mainServices.map((service, index) => (
               <Card key={index} className="group hover:shadow-elegant transition-all duration-300">
                 <CardHeader>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-gold rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <service.icon size={24} className="text-background" />
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-gradient-gold rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <service.icon size={24} className="text-background" />
+                      </div>
+                      <CardTitle className="text-xl lg:text-2xl">{service.title}</CardTitle>
                     </div>
-                    <CardTitle className="text-xl lg:text-2xl">{service.title}</CardTitle>
+                    <div className="bg-gradient-gold text-background px-3 py-1 rounded-full text-sm font-semibold">
+                      {service.clients} clients
+                    </div>
                   </div>
                 </CardHeader>
                 <CardContent>

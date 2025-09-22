@@ -42,7 +42,7 @@ const Footer = () => {
             <img 
               src={mmm_logo} 
               alt="MMM" 
-              className="h-20 w-20 sm:h-16q sm:w-64 text-primary flex-shrink-0"
+              className="h-16 w-16 object-contain flex-shrink-0 mb-4"
             />
             <p className="text-base text-muted-foreground mb-6 leading-relaxed">
               Empowering individuals and businesses to make smarter financial decisions. 
@@ -58,11 +58,16 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-muted-foreground">
                 <Phone size={16} className="text-primary" />
-                <span>+1 (555) 123-4567</span>
+                <span>03-6257 8688</span>
               </div>
-              <div className="flex items-center space-x-3 text-muted-foreground">
-                <MapPin size={16} className="text-primary" />
-                <span>New York, NY</span>
+              <div className="flex items-start space-x-3 text-muted-foreground">
+                <MapPin size={16} className="text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <div>MULTI METRICS MARKETING</div>
+                  <div>57-3A-1, JALAN METRO PERDANA BARAT 1,</div>
+                  <div>TAMAN USAHAWAN KEPONG,</div>
+                  <div>52100 KUALA LUMPUR.</div>
+                </div>
               </div>
             </div>
           </div>

@@ -37,28 +37,22 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: "Sarah Johnson",
+      name: "Ahmad Hassan",
       role: "Chief Executive Officer",
-      experience: "15+ years in financial services",
-      description: "Former Goldman Sachs VP with expertise in strategic financial planning."
+      experience: "11+ years in financial services",
+      description: "Seasoned financial expert with deep understanding of Malaysian banking systems and international finance."
     },
     {
-      name: "Michael Chen",
-      role: "Chief Investment Officer",
-      experience: "12+ years in investment management",
-      description: "Portfolio management expert with a track record of consistent returns."
+      name: "Li Wei Chen",
+      role: "Senior Loan Advisor",
+      experience: "8+ years in loan advisory",
+      description: "Specialist in personal and business loans with extensive network of banking partners across Malaysia."
     },
     {
-      name: "Emily Rodriguez",
-      role: "Head of Risk Management",
-      experience: "10+ years in risk assessment",
-      description: "Specialized in developing comprehensive risk mitigation strategies."
-    },
-    {
-      name: "David Thompson",
-      role: "Senior Financial Advisor",
-      experience: "8+ years in wealth management",
-      description: "Dedicated to helping clients achieve their long-term financial goals."
+      name: "Priya Sharma",
+      role: "Financial Consultant",
+      experience: "6+ years in debt management",
+      description: "Expert in debt consolidation and refinancing solutions, helping clients optimize their financial positions."
     }
   ];
 
@@ -71,8 +65,7 @@ const About = () => {
             About <span className="text-transparent bg-gradient-gold bg-clip-text">Multi Metrics Marketing</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We're more than just financial consultants – we're innovators committed to reshaping 
-            the financial landscape and empowering our clients to build resilient, profitable futures.
+            Your trusted financial partner with 11 years of expertise in banking and loan services across Malaysia.
           </p>
         </div>
       </section>
@@ -86,9 +79,8 @@ const About = () => {
                 <Target size={48} className="text-background mx-auto mb-6" />
                 <h2 className="text-3xl font-bold text-background mb-4">Our Mission</h2>
                 <p className="text-background/90 text-lg leading-relaxed">
-                  To revolutionize how financial solutions are produced and delivered, 
-                  empowering individuals and businesses to make smarter financial decisions 
-                  that drive sustainable growth and prosperity.
+                  To provide simple, reliable, and tailored financial solutions that help our clients achieve their goals with confidence.
+                  We aim to be the trusted link between people and banks through professionalism, integrity, and results-driven service.
                 </p>
               </CardContent>
             </Card>
@@ -98,9 +90,7 @@ const About = () => {
                 <Eye size={48} className="text-primary mx-auto mb-6" />
                 <h2 className="text-3xl font-bold text-foreground mb-4">Our Vision</h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  To be the leading force in financial innovation, creating a world where 
-                  every individual and business has access to cutting-edge financial strategies 
-                  that ensure long-term resilience and success.
+                  To be a trusted financial agency recognized for excellence, integrity, and innovation — delivering seamless banking solutions that empower individuals and businesses to grow with confidence.
                 </p>
               </CardContent>
             </Card>
@@ -115,20 +105,13 @@ const About = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-8">Our Story</h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Founded with a vision to transform the financial services industry, Multi Metrics Marketing 
-                emerged from the recognition that traditional financial consulting was failing to meet 
-                the evolving needs of modern businesses and individuals.
+                Established in 2014, our agency has over 11 years of experience in the financial and banking services industry. As a trusted partner to both individuals and businesses, we specialize in providing tailored financial solutions, from personal loans and credit advisory to business financing and banking consultation.
               </p>
               <p>
-                Our team of seasoned financial experts came together with a shared passion for innovation 
-                and a commitment to delivering results that matter. We saw an opportunity to leverage 
-                advanced analytics, cutting-edge technology, and personalized strategies to create 
-                financial solutions that truly make a difference.
+                With a deep understanding of the banking system and a strong network of partners, our mission is to simplify financial processes, guide our clients through complex banking procedures, and help them achieve their financial goals with confidence and clarity.
               </p>
               <p>
-                Today, we continue to push the boundaries of what's possible in financial consulting, 
-                helping our clients navigate complex financial landscapes with confidence and achieve 
-                sustainable growth that stands the test of time.
+                Our team is committed to integrity, professionalism, and delivering results that matter.
               </p>
             </div>
           </div>
@@ -179,7 +162,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <Card key={index} className="text-center group hover:shadow-elegant transition-all duration-300">
                 <CardContent className="p-6">
@@ -216,20 +199,20 @@ const About = () => {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">500+</div>
-              <div className="text-muted-foreground">Satisfied Clients</div>
+              <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">35,446+</div>
+              <div className="text-muted-foreground">Total Clients Served</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">$2.5B+</div>
-              <div className="text-muted-foreground">Assets Under Management</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">15+</div>
-              <div className="text-muted-foreground">Years of Experience</div>
+              <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">11+</div>
+              <div className="text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center">
               <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">98%</div>
-              <div className="text-muted-foreground">Client Retention Rate</div>
+              <div className="text-muted-foreground">Success Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">24/7</div>
+              <div className="text-muted-foreground">Support Available</div>
             </div>
           </div>
         </div>

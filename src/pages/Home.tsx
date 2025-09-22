@@ -29,43 +29,54 @@ const Home = () => {
   });
 
   const stats = [
-    { value: 500, label: "Clients Served", suffix: "+" },
-    { value: 2.5, label: "Assets Managed", prefix: "$", suffix: "B+" },
-    { value: 15, label: "Years Experience", suffix: "+" },
-    { value: 98, label: "Client Satisfaction", suffix: "%" },
+    { value: 35446, label: "Total Clients Served", suffix: "+" },
+    { value: 11, label: "Years Experience", suffix: "+" },
+    { value: 98, label: "Success Rate", suffix: "%" },
+    { value: 24, label: "Support Available", suffix: "/7" },
   ];
 
-  const count1 = useCountAnimation({ end: 500, duration: 2500 });
-  const count2 = useCountAnimation({ end: 25, duration: 2500 }); // 2.5 * 10 for decimals
-  const count3 = useCountAnimation({ end: 15, duration: 2000 });
-  const count4 = useCountAnimation({ end: 98, duration: 2200 });
+  const count1 = useCountAnimation({ end: 35446, duration: 3000 });
+  const count2 = useCountAnimation({ end: 11, duration: 2000 });
+  const count3 = useCountAnimation({ end: 98, duration: 2200 });
+  const count4 = useCountAnimation({ end: 24, duration: 1800 });
 
   const counters = [count1, count2, count3, count4];
 
   const services = [
     {
-      icon: TrendingUp,
-      title: "Financial Planning",
-      description: "Comprehensive financial strategies tailored to your goals and risk tolerance.",
+      icon: Users,
+      title: "Personal Loans",
+      description: "Tailored personal financing solutions for your individual needs and goals.",
       image: financialPlanningImage,
-    },
-    {
-      icon: Shield,
-      title: "Risk Management",
-      description: "Protect your wealth with sophisticated risk assessment and mitigation strategies.",
-      image: riskManagementImage,
-    },
-    {
-      icon: Target,
-      title: "Investment Advisory",
-      description: "Expert guidance to optimize your investment portfolio for maximum returns.",
-      image: investmentAdvisoryImage,
+      clients: "25,369",
     },
     {
       icon: BarChart3,
-      title: "Business Consulting",
-      description: "Strategic business financial consulting to accelerate growth and profitability.",
+      title: "SME Financing",
+      description: "Business loans and financing solutions to help your enterprise grow.",
       image: businessConsultingImage,
+      clients: "834",
+    },
+    {
+      icon: Shield,
+      title: "Debt Consolidation",
+      description: "Simplify your finances by consolidating multiple debts into one manageable payment.",
+      image: riskManagementImage,
+      clients: "8,756",
+    },
+    {
+      icon: TrendingUp,
+      title: "Housing Loans",
+      description: "Make your dream home a reality with our competitive housing loan packages.",
+      image: investmentAdvisoryImage,
+      clients: "329",
+    },
+    {
+      icon: Calculator,
+      title: "Refinancing",
+      description: "Optimize your existing loans with better rates and terms through refinancing.",
+      image: financialPlanningImage,
+      clients: "458",
     },
   ];
 
@@ -143,8 +154,7 @@ const Home = () => {
                   className="text-center"
                 >
                   <div className="text-4xl lg:text-5xl font-bold text-primary mb-3">
-                    {stat.prefix}
-                    {index === 1 ? (counter.count / 10).toFixed(1) : counter.count}
+                    {counter.count}
                     {stat.suffix}
                   </div>
                   <div className="text-lg text-muted-foreground">{stat.label}</div>
@@ -173,7 +183,7 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -189,6 +199,9 @@ const Home = () => {
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                    <div className="absolute top-4 right-4 bg-gradient-gold text-background px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+                      {service.clients} clients
+                    </div>
                   </div>
                   <CardContent className="p-6 text-center">
                     <motion.div 

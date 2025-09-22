@@ -66,8 +66,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "+1 (555) 123-4567",
-      subtext: "Mon-Fri, 9AM-6PM EST"
+      details: "03-6257 8688",
+      subtext: "Mon-Fri, 9AM-6PM MYT"
     },
     {
       icon: Mail,
