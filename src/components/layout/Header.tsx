@@ -25,10 +25,10 @@ const Header = () => {
           {/* Logo Space */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3">
-              <img 
+            <img 
               src={mmm_logo} 
               alt="MMM" 
-              className="h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 object-contain flex-shrink-0"
+              className="h-64 w-64 object-contain flex-shrink-0"
             />
             </Link>
           </div>
