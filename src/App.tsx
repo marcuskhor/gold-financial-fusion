@@ -20,7 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/gold-financial-fusion">
+      <BrowserRouter basename="/">
         <ScrollToTop />
         <Layout>
           <Routes>
