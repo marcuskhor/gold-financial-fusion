@@ -133,14 +133,14 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Office",
-      details: "New York, NY",
+      details: "57-3A-1, Jalan Metro Perdana Barat 1, Taman Usahawan Kepong, 52100 Kuala Lumpur",
       subtext: "By appointment only"
     },
     {
       icon: Clock,
       title: "Business Hours",
       details: "Monday - Friday",
-      subtext: "9:00 AM - 6:00 PM EST"
+      subtext: "9:00 AM - 6:00 PM MYT"
     }
   ];
 
