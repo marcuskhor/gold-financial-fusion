@@ -67,20 +67,21 @@ const Contact = () => {
       if (error) throw error;
 
       // Send email notification
-      try {
-        await supabase.functions.invoke('send-contact-notification', {
-          body: {
-            name: validatedData.name,
-            email: validatedData.email,
-            phone: validatedData.phone,
-            company: validatedData.company,
-            service: validatedData.service,
-            message: validatedData.message,
-          },
-        });
-      } catch (emailError) {
+      const { data: emailData, error: emailError } = await supabase.functions.invoke('send-contact-notification', {
+        body: {
+          name: validatedData.name,
+          email: validatedData.email,
+          phone: validatedData.phone,
+          company: validatedData.company,
+          service: validatedData.service,
+          message: validatedData.message,
+        },
+      });
+
+      if (emailError) {
         console.error("Failed to send email notification:", emailError);
-        // Don't fail the form submission if email fails
+      } else {
+        console.log("Email notification sent successfully:", emailData);
       }
 
       toast({
