@@ -122,7 +122,7 @@ const Contact = () => {
       icon: Phone,
       title: "Phone",
       details: "03-6257 8688",
-      subtext: "Mon-Fri, 9AM-6PM MYT"
+      subtext: "Mon-Fri, 10AM-7PM MYT"
     },
     {
       icon: Mail,
@@ -140,7 +140,7 @@ const Contact = () => {
       icon: Clock,
       title: "Business Hours",
       details: "Monday - Friday",
-      subtext: "9:00 AM - 6:00 PM MYT"
+      subtext: "10:00 AM - 7:00 PM MYT"
     }
   ];
 
