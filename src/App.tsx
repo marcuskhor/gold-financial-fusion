@@ -12,6 +12,7 @@ import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
+import MaintenanceLock from "./components/MaintenanceLock";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter basename="/">
         <ScrollToTop />
+        <MaintenanceLock>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -42,6 +44,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
+        </MaintenanceLock>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
