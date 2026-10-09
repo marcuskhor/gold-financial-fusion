@@ -1,17 +1,15 @@
-import { ReactNode, useMemo } from "react";
+import { ReactNode } from "react";
 import mmm_logo from "@/assets/MMM_logo.png";
 
 /**
- * Date-based maintenance lock.
- * Shows a maintenance notice until the end of October 9, 2026 (MYT, UTC+8),
- * then automatically restores the full site.
- *
- * Unlock instant: 2026-10-10 00:00 MYT = 2026-10-09 16:00 UTC.
+ * Manual maintenance lock.
+ * While MAINTENANCE_MODE is true, visitors only see the "We'll Be Back Soon"
+ * notice. Set it to false to restore the full site.
  */
-const UNLOCK_AT = new Date("2026-10-09T16:00:00Z").getTime();
+const MAINTENANCE_MODE = true;
 
 const MaintenanceLock = ({ children }: { children: ReactNode }) => {
-  const isLocked = useMemo(() => Date.now() < UNLOCK_AT, []);
+  const isLocked = MAINTENANCE_MODE;
 
   if (!isLocked) {
     return <>{children}</>;
